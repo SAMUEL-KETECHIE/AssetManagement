@@ -1,0 +1,26 @@
+	Categories
+Computers
+Furniture
+Vehicle
+Management
+Others
+
+	Computers
+Laptops
+Desktops
+Projectors
+Accessories
+
+	Furniture
+Chairs & Tables
+Others (Board)
+
+	Vehicles
+Cars & Motor cycles
+Buses & Vans
+
+	Management
+Transfers
+Returns
+
+	Others

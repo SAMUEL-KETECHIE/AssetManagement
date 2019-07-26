@@ -22,6 +22,7 @@
                     <li><a href="#">Laptops</a></li>
                     <li><a href="#">Desktops</a></li>
                     <li><a href="#">Projectors</a></li>
+                    <li><a href="#"> Printers </a></li>
                     <li><a href="#">Accessories</a></li>
                 </ul>
             </div>
