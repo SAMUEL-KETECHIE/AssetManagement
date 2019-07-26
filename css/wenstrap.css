@@ -1,0 +1,128 @@
+﻿/*******************************************
+//***   STYLE SHEET FOR SNACK BAR           
+//***   CREATOR: SAMUEL WENDOLIN KETECHIE    	   
+//***   DATE: DEC 26TH, 2018 	
+******************************************/
+*,body{
+	box-sizing: border-box;
+}
+/*Snack Bar*/
+#snack_bar, #snack_bar_success, #snack_bar_warning, #snack_bar_error{
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: hsl(0, 97%, 72%);
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 10;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+}
+
+#snack_bar.show, #snack_bar_success.show, #snack_bar_warning.show, #snack_bar_error.show{
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+}
+
+.txtHead{
+	font-size: 20px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	border: 1px;
+	text-justify: auto;
+	margin-top: 10rem;
+}
+
+.footTxt{
+	text-align: center;
+}
+
+#txt_search{
+	width: 41rem;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	border-radius: 10px;
+	margin-right: -40px;
+
+}
+
+
+#btn_search{
+	border-radius: 10px;
+}
+
+
+.txtArea{
+	width: 100%;
+	height: 10rem;
+}
+
+.page-bg{
+	background-image: url('../img/toolsBackground.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	opacity: 0.9;
+}
+
+.page-gradient{
+	/*background-image: url('../img/maldives.jpg'); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	opacity: 100;
+}
+
+.page-white{
+	background-color: white;
+	opacity: 100;
+}
+
+
+.main-card, .form-card{
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0,5);
+	padding: 10px;
+	margin-top: 20px;
+	background-color: #fff;
+	text-decoration: none;
+	z-index: 5;
+}
+
+.page-container{
+	height: 100vh;
+}
+
+.form-labels{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+@media(min-width:768px) {
+
+	#txt_search{
+		width: 41rem;
+	}
+}
