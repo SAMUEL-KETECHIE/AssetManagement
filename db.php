@@ -2,8 +2,8 @@
 $server ="localhost";
 $user ="root";
 $password ="";
-$dbase ="asset";
-$portNumber="3308";
+$dbase ="asset_management";
+$portNumber="3306";
 
 $conn = mysqli_connect($server,$user,$password,$dbase,$portNumber);
 /*
@@ -18,4 +18,8 @@ if($conn){
 
 }
 */
+
+function formatDate( $d ) {
+    return date( 'jS M y', strtotime($d));
+}
 ?>

@@ -19,11 +19,11 @@
             </a>
             <div class="collapse" id="togglecomputers" style="height: 0px;">
                 <ul class="nav nav-list">
-                    <li><a href="#">Laptops</a></li>
-                    <li><a href="#">Desktops</a></li>
-                    <li><a href="#">Projectors</a></li>
-                    <li><a href="#"> Printers </a></li>
-                    <li><a href="#">Accessories</a></li>
+                    <li><a href="../computers/laptops">Laptops</a></li>
+                    <li><a href="../computers/desktops">Desktops</a></li>
+                    <li><a href="../computers/projectors">Projectors</a></li>
+                    <li><a href="../computers/printers"> Printers </a></li>
+                    <li><a href="../computers/accessories">Accessories</a></li>
                 </ul>
             </div>
         </li>
@@ -33,8 +33,8 @@
             </a>
             <div class="collapse" id="togglefurniture" style="height: 0px;">
                 <ul class="nav nav-list">
-                    <li><a href="#">Chairs & Tables</a></li>
-                    <li><a href="#">Others</a></li>
+                    <li><a href="../furniture/tablechairs">Chairs & Tables</a></li>
+                    <li><a href="../furniture/otherFurnitures">Others</a></li>
                 </ul>
             </div>
         </li>
