@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+    $("#laptopTable").dataTable();
+    $("#desktopTable").dataTable();
+    $("#projTable").dataTable();
+    $("#accessoryTable").dataTable();
+    $("#printerTable").dataTable();
+    $("#tablechairTable").dataTable();
+    $("#otherFurnTable").dataTable();
+
     /*
     document.querySelector("#snack_bar_warning").style.display = "none";
     document.querySelector("#snack_bar_success").style.display = "none";
@@ -29,21 +37,6 @@ function clearTextFields(e,fields) {
     );
 }
 
-function validateTextFields(fields){
-	let errorMessage="";
-	for(let field in fields){
-		if(field==="" || field===undefined || field.length===0 || field.value===""){
-			let fieldName=field.getAttribute(name);
-			errorMessage +=fieldName + "cannot be empty";
-		}
-	}
-	showSnackBarDanger(errorMessage);
-	if(errorMessage===""){
-	    return true;
-    }else {
-	    return false;
-    }
-}
 
 
 function showSnackBarWarning(message) {
@@ -85,8 +78,6 @@ function  postRequest(uri,reqObject,callback=null) {
         data 	: reqObject,
         success	: function(data,status){
             if(status===true){
-                message="Data saved successfully";
-                showSnackBarSuccess(message);
                 callback(data);
                 return true;
             }else{
@@ -97,33 +88,3 @@ function  postRequest(uri,reqObject,callback=null) {
         }
     })
 }
-
-/*
-$("#txtdob").value("");
-$("#txtpob").value("");
-$("#txtfname").value("");
-$("#txtfnalty").value("");
-$("#txtfhome").value("");
-$("#txtfocc").value("");
-$("#txtfphone").value("");
-$("#txtmname").value("");
-$("#txtmnalty").value("");
-$("#txtmhome").value("");
-$("#txtmocc").value("");
-$("#txtmphone").value("");
-$("#txtpaddress").value("");
-$("#txtnok").value("");
-$("#txtnokphone").value("");
-$("#txtprevsch").value("");
-$("#txtpop").value("");
-$("#txthlang").value("");
-$("#txthaddr").value("");
-$("#txtspecneed").value("");
-$("#txtsickcon").value("");
-$("#txtmed").value("");
-$("#txtalleg").value("");
-$("#txteyeprob").value("");
-$("#txtearprob").vvalue("");
-$("#txtother").value("");
-
- */

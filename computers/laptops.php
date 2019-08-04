@@ -3,6 +3,7 @@
 
 <html>
 <?php
+include "../db.php";
 include "computersHeader.php";
 ?>
 <body >
@@ -18,38 +19,41 @@ include "../navbar.php";
     <div  id="page-content-wrapper">
         <div class="container-fluid main-card page-container">
             <h3 class="text-center text-primary panel panel-heading">Computers and Accessories</h3>
-            <form class="navbar-form" role="search">
-                <input class="form-control" type="text" id="txt_search" placeholder="Search..."/>
-                <button class="btn btn-info" type="submit" id="btn_search" >
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-            </form>
-            <table class="table table-bordered">
+
+            <table class="table table-bordered" id="laptopTable">
                 <thead>
                 <tr class="info">
                     <th>#</th>
-                    <th>Student No.</th>
-                    <th>Full Name</th>
-                    <th>Class</th>
+                    <th>Item Code</th>
+                    <th>Asset Name</th>
+                    <th>Asset Type</th>
+                    <th>Date Added</th>
                     <th>Image</th>
-                    <th>Age (yrs)</th>
-                    <th>Father's Name</th>
-                    <th>Mother's Name</th>
-                    <th>Student Location</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
+                <?php
+                $rowId=0;
+                $sql= "SELECT * FROM asset where catid=1";
+                $runCat= mysqli_query($conn,$sql);
+                if(mysqli_num_rows($runCat) > 0){
+                    while ($row=mysqli_fetch_array($runCat)){
+                        $catId=$row['catid'];
+                        $assetCode=$row['assetcode'];
+                        $ssName=$row['assetname'];
+                        $dateadd=$row['dateadded'];
+                        $img=$row['assetimage'];
+                        $rowId = $rowId + 1;
+
+                ?>
                 <tr>
-                    <td> 1 </td>
-                    <td> WEN2000 </td>
-                    <td> Palma Wendolin </td>
-                    <td> 2 </td>
-                    <td> My image here </td>
-                    <td> 9 </td>
-                    <td> Samuel Wendolin</td>
-                    <td>Whitney Mark Wendolin</td>
-                    <td> Westland- Legon</td>
+                    <td> <?php echo $rowId; ?>  </td>
+                    <td> <?php echo $assetCode; ?>  </td>
+                    <td> <?php echo $ssName; ?>  </td>
+                    <td> <?php echo $catId; ?> </td>
+                    <td> <?php echo formatDate($dateadd); ?> </td>
+                    <td> <?php echo $img; ?>  </td>
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-info" id="btn_edit_std"><span class="glyphicon glyphicon-pencil"> Edit</span></button>
@@ -57,6 +61,11 @@ include "../navbar.php";
                         </div>
                     </td>
                 </tr>
+                <?php
+
+                    }
+                }
+                ?>
                 </tbody>
             </table>
 
